@@ -61,17 +61,12 @@ public class Main {
      	    session.save(st5);
      	    session.save(st6);
      	    session.save(st7);
-     	    session.save(c1);
-     	    session.save(c2);
-     	    session.save(c3);
-     	//   Query query=session.createQuery("from com.model.Class");
-			//List<Class> cList=query.list();
-				//	System.out.println(cList);
+     	Query query=session.createQuery("from com.model.Class");
+			List<Class> cList=query.list();
+			System.out.println(cList);
 			transaction.commit();
 			session.close();
 			factory.close();
 			}
 
 	}
-
-
